@@ -25,14 +25,14 @@ public class BoardController {
         return "/board/notice";
     }
 
-    @GetMapping(value = "/noticeinsert")
+    @GetMapping(value = "/noticeInsert")
     public String doGetInsert(Model model){
         System.out.println("게시물 등록");
         model.addAttribute("board", new Board()) ;
         return "/board/noticeInsert";
     }
 
-    @PostMapping(value = "/noticeinsert")
+    @PostMapping(value = "/noticeInsert")
     public String doPostInsert(Board board){
         System.out.println("board : " + board);
         int cnt = -999 ;
@@ -40,9 +40,9 @@ public class BoardController {
         System.out.println("cnt : " + cnt);
 
         if(cnt == 1){
-            return "redirect:/board/noticeinsert";
+            return "redirect:/board/noticeInsert";
         }else{
-            return "/board/noticeinsert";
+            return "/board/noticeInsert";
         }
     }
 
